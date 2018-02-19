@@ -2,9 +2,13 @@
 
 namespace Spaggel\Tooltip\Setup;
 
+use Magento\Framework\Setup\InstallSchemaInterface;
+use Magento\Framework\Setup\SchemaSetupInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+
 use \Magento\Framework\DB\Ddl\Table;
 
-class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
+class InstallSchema implements InstallSchemaInterface
 {
     public function upgrade(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
     {
