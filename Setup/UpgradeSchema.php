@@ -10,19 +10,16 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
     {
         $setup->startSetup();
 
-        if (version_compare($context->getVersion(), '0.1.0', '<=')) {
-
-            $setup->getConnection()->addColumn(
-                $setup->getTable('eav_attribute'),
-                'tooltip',
-                [
-                    'type' => Table::TYPE_TEXT,
-                    'length' => Table::MAX_TEXT_SIZE,
-                    'nullable' => true,
-                    'comment' => 'Attribute tooltip'
-                ]
-            );
-        }
+        $setup->getConnection()->addColumn(
+            $setup->getTable('eav_attribute'),
+            'tooltip',
+            [
+                'type' => Table::TYPE_TEXT,
+                'length' => Table::MAX_TEXT_SIZE,
+                'nullable' => true,
+                'comment' => 'Attribute tooltip'
+            ]
+        );
 
         $setup->endSetup();
     }
