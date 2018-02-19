@@ -6,7 +6,7 @@ use Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Main as CoreMain;
 class Main extends CoreMain
 {
 
-    protected $_wysiwygConfig;
+    protected $wysiwygConfig;
 
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -21,7 +21,7 @@ class Main extends CoreMain
     )
     {
         parent::__construct($context, $registry, $formFactory, $eavData, $yesnoFactory, $inputTypeFactory, $propertyLocker, $data);
-        $this->_wysiwygConfig = $wysiwygConfig;
+        $this->wysiwygConfig = $wysiwygConfig;
     }
 
 
@@ -41,7 +41,7 @@ class Main extends CoreMain
                 'name' => 'tooltip',
                 'label' => __('Attribute tooltip'),
                 'title' => __('Attribute tooltip'),
-                'config' => $this->_wysiwygConfig->getConfig(),
+                'config' => $this->wysiwygConfig->getConfig(),
             ]
         );
 
