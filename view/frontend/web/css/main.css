@@ -1,0 +1,14 @@
+.tooltip {
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background: #26487b;
+    text-decoration: none;
+}
+.tooltip:hover {
+    background: #5da3ff;
+    color: #fff;
+}

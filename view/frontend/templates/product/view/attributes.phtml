@@ -26,7 +26,7 @@
                 <tr title="<?= $_data['tooltip'] ?>">
                     <th class="col label" scope="row">
                         <?= $block->escapeHtml(__($_data['label'])) ?>
-                        <a href="#tooltip_<?= $_data['code'] ?>" class="action primary" style="border-radius: 12px; width: 24px; height: 24px; padding: px; text-align: center;">?</a>
+                        <span class="tooltip">?</span>
                     </th>
                     <td class="col data" data-th="<?= $block->escapeHtml(__($_data['label'])) ?>">
                         <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?>
