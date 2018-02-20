@@ -20,13 +20,5 @@
         "psr-4": {
             "Spaggel\\Tooltip\\": ""
         }
-    },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "Spaggel/Tooltip"
-            ]
-        ]
     }
 }
