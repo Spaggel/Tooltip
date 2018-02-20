@@ -1,3 +1,6 @@
+.tooltip-content-wrapper {
+    display: none;
+}
 .tooltip {
     border-radius: 12px;
     width: 24px;
