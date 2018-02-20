@@ -2,4 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Main" type="Spaggel\Tooltip\Block\Adminhtml\Product\Attribute\Edit\Tab\Main" />
     <preference for="Magento\Catalog\Block\Product\View\Attributes" type="Spaggel\Tooltip\Block\Product\View\Attributes" />
+    <preference for="Magento\ConfigurableProduct\Model\ConfigurableAttributeData" type="Spaggel\Tooltip\Model\ConfigurableAttributeData" />
+
+    <type name="Magento\Swatches\Block\Product\Renderer\Configurable">
+        <plugin name="Spaggel_Tooltip_Override_Configurable_Swatch_Template" type="Spaggel\Tooltip\Plugin\ProductSwatchPlugin" />
+    </type>
 </config>
