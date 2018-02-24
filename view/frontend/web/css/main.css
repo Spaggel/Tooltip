@@ -3,18 +3,20 @@
     display: none;
 }
 .tooltip, .swatch-tooltip {
-    border-radius: 12px;
-    width: 24px;
-    height: 24px;
+    margin-left: 8px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     text-align: center;
     color: #fff;
-    background: #26487b;
+    background: #116fb2;
     text-decoration: none;
 }
 .tooltip:hover, .swatch-tooltip:hover {
     background: #5da3ff;
     color: #fff;
+    cursor: pointer;
 }
 
 /* THEME */
