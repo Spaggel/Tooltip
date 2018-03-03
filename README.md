@@ -4,11 +4,37 @@
 
 This module adds support for tooltips on product attributes.
 
+## Install
+
+Run `composer require spaggel/tooltip` to install the latest release.
+
 ## Functionality
 
 **Support for tooltips on:**
 - Product attributes table (product view page)
 - Configurable swatches (product view page)
+
+### Screenshots
+
+#### Product information:
+
+Closed:
+
+![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-closed.jpg)
+
+Opened:
+
+![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-open.jpg)
+
+#### Configurable product swatch:
+
+Closed:
+
+![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-closed.png)
+
+Opened:
+ 
+![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-open.png)
 
 **Todo**:
 
