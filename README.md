@@ -14,27 +14,31 @@ Run `composer require spaggel/tooltip` to install the latest release.
 - Product attributes table (product view page)
 - Configurable swatches (product view page)
 
+### Demo
+
+Frontend demo: [here](https://magento2.spaggel.nl/configurable-product-2.html)
+
 ### Screenshots
 
 #### Product information:
 
 Closed:
 
-![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-closed.jpg)
+![tooltip closed](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-closed.jpg)
 
 Opened:
 
-![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-open.jpg)
+![tooltip open](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-attribute-tooltip-open.jpg)
 
 #### Configurable product swatch:
 
 Closed:
 
-![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-closed.png)
+![swatch closed](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-closed.png)
 
 Opened:
  
-![alt text](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-open.png)
+![swatch open](https://raw.githubusercontent.com/wiki/Spaggel/Tooltip/img/product-swatch-tooltip-open.png)
 
 **Todo**:
 
