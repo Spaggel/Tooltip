@@ -47,7 +47,7 @@ Add support for:
 - [ ] CMS variables (e.g. {{store url}}) **Work in progress**
 - [ ] ?
 
-## Info
+## How to use
 
 More info can be found in the [Wiki](https://github.com/Spaggel/Tooltip/wiki).
 
