@@ -1,17 +1,19 @@
 {
     "name": "spaggel/tooltip",
-    "description": "",
+    "description": "Product attribute tooltips module for Magento 2.2",
     "require": {
         "php": "~5.6.0|~7.0.0|~7.1.0|~7.2.0",
         "magento/magento-composer-installer": "*"
     },
-    "suggest": {
-
-    },
     "type": "magento2-module",
-    "version": "0.1.0",
-    "license": [
-
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel van der Linden",
+            "email": "daniel@spaggel.nl",
+            "homepage": "https://spaggel.nl",
+            "role": "Developer"
+        }
     ],
     "autoload": {
         "files": [

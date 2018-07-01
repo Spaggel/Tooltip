@@ -26,12 +26,14 @@
                 <tr>
                     <th class="col label" scope="row">
                         <?= $block->escapeHtml(__($_data['label'])) ?>
+                        <?php if($_data['tooltip']): ?>
                         <span class="tooltip" data-tooltip-content="#tooltip-content-<?= $_data['code'] ?>">?</span>
                         <div class="tooltip-content-wrapper">
                             <div id="tooltip-content-<?= $_data['code'] ?>" class="tooltip-content">
                                 <?= $_data['tooltip'] ?>
                             </div>
                         </div>
+                        <?php endif; ?>
                     </th>
                     <td class="col data" data-th="<?= $block->escapeHtml(__($_data['label'])) ?>">
                         <?= /* @escapeNotVerified */ $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?>

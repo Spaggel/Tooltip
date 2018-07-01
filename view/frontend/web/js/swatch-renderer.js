@@ -47,8 +47,9 @@ define([
                     listLabel = 'aria-labelledby="' + controlLabelId + '"';
                 }
 
-                // Check if the tooltip has content, otherwise set it to an empty string
-                var hasTooltip = item.tooltip.length > 0;
+                // Check if the tooltip has content and we are not in the product list,
+                // otherwise set it to an empty string
+                var hasTooltip = item.tooltip.length > 0 && !$widget.inProductList;
                 var toolTipHtml = hasTooltip ?
                     // custom swatch tooltip
                     '<span class="swatch-tooltip" title="testing" data-tooltip-content="#tooltip-swatch-content-'+item.code+'">?</span>' +
