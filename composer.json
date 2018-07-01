@@ -13,11 +13,6 @@
             "email": "daniel@spaggel.nl",
             "homepage": "https://spaggel.nl",
             "role": "Developer"
-        },
-        {
-            "name": "Tickles B.V.",
-            "homepage": "https://www.tickles.nl",
-            "email": "daniel@tickles.nl"
         }
     ],
     "autoload": {
