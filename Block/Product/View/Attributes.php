@@ -5,7 +5,6 @@ namespace Spaggel\Tooltip\Block\Product\View;
 use Magento\Catalog\Block\Product\View\Attributes as CoreAttributes;
 use Magento\Framework\Phrase;
 
-
 class Attributes extends CoreAttributes
 {
     public function getAdditionalData(array $excludeAttr = [])
@@ -14,20 +13,18 @@ class Attributes extends CoreAttributes
         $product = $this->getProduct();
         $attributes = $product->getAttributes();
         foreach ($attributes as $attribute) {
-            if ($attribute->getIsVisibleOnFront() && !in_array($attribute->getAttributeCode(), $excludeAttr)) {
+            if ($this->isVisibleOnFrontend($attribute, $excludeAttr)) {
                 $value = $attribute->getFrontend()->getValue($product);
 
-                if (!$product->hasData($attribute->getAttributeCode())) {
-                    $value = __('N/A');
-                } elseif ((string)$value == '') {
-                    $value = __('No');
+                if ($value instanceof Phrase) {
+                    $value = (string)$value;
                 } elseif ($attribute->getFrontendInput() == 'price' && is_string($value)) {
                     $value = $this->priceCurrency->convertAndFormat($value);
                 }
 
-                if ($value instanceof Phrase || (is_string($value) && strlen($value))) {
+                if (is_string($value) && strlen(trim($value))) {
                     $data[$attribute->getAttributeCode()] = [
-                        'label' => __($attribute->getStoreLabel()),
+                        'label' => $attribute->getStoreLabel(),
                         'value' => $value,
                         'code' => $attribute->getAttributeCode(),
                         'tooltip' => $attribute->getData('tooltip'),
@@ -36,7 +33,5 @@ class Attributes extends CoreAttributes
             }
         }
         return $data;
-
     }
-
 }
