@@ -26,12 +26,10 @@
                     <th class="col label" scope="row">
                         <?= $block->escapeHtml($_data['label']) ?>
                         <?php if (!empty($_data['tooltip'])): ?>
-                        <span class="tooltip" data-tooltip-content="#tooltip-content-<?= $_data['code'] ?>">?</span>
-                        <div class="tooltip-content-wrapper">
-                            <div id="tooltip-content-<?= $_data['code'] ?>" class="tooltip-content">
-                                <?= $_data['tooltip'] ?>
-                            </div>
-                        </div>
+                        <span class="spaggel-tooltip">
+                            <a href="#" class="tooltip-toggle">?</a>
+                            <span class="tooltip-content"><?= $_data['tooltip'] ?></span>
+                        </span>
                         <?php endif; ?>
                     </th>
                     <td class="col data" data-th="<?= $block->escapeHtmlAttr($_data['label']) ?>"><?= /* @noEscape */ $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
@@ -41,14 +39,3 @@
         </table>
     </div>
 <?php endif;?>
-
-<script type="text/x-magento-init">
-    {
-         ".tooltip": {
-             "Tooltipster": {
-                 "contentCloning": true,
-                 "theme": "tooltipster-custom"
-             }
-         }
-    }
-</script>

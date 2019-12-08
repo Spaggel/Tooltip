@@ -1,11 +1,9 @@
 var config = {
-    map: {
-        "*": {
-            "Tooltipster": "Spaggel_Tooltip/js/tooltip.wrapper",
-            "SwatchRenderer": "Spaggel_Tooltip/js/swatch-renderer"
+    config: {
+        'mixins': {
+            'Magento_Swatches/js/swatch-renderer': {
+                'Spaggel_Tooltip/js/swatch-renderer-mixin': true
+            }
         }
-    },
-    shim: {
-        "Spaggel_Tooltip/js/tooltipster.bundle.min": ["jquery"]
     }
 };
