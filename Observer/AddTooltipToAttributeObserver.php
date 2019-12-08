@@ -8,6 +8,11 @@ use Magento\Framework\Event\ObserverInterface;
 class AddTooltipToAttributeObserver implements ObserverInterface
 {
     /**
+     * @var \Magento\Cms\Model\Wysiwyg\Config
+     */
+    private $wysiwygConfig;
+
+    /**
      * AddTooltipToAttributeObserver constructor.
      * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig
      */
