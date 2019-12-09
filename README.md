@@ -57,8 +57,6 @@ I wrote some technical stuff about the module and how it works: [here](https://g
 
 ### Credits
 
-Tooltips are created using [Tooltipster](http://iamceege.github.io/tooltipster/).
-
 This module is using the [MIT License](https://github.com/Spaggel/Tooltip/blob/master/LICENSE.md)
 
 ### Contributing
