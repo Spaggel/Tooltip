@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="left">
+            <referenceBlock name="attribute_edit_tabs">
+                <block class="Spaggel\Tooltip\Block\Adminhtml\Catalog\Product\Attribute\Edit\Tab\Tooltips" name="spaggel_tooltip"/>
+                <action method="addTab">
+                    <argument name="tabId" xsi:type="string">spaggel_tooltip</argument>
+                    <argument name="tab" xsi:type="string">spaggel_tooltip</argument>
+                </action>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>

@@ -2,37 +2,38 @@
 
 namespace Spaggel\Tooltip\Observer;
 
+use Magento\Framework\Data\Form;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
+use Magento\Ui\Component\Wysiwyg\ConfigInterface;
 
 class AddTooltipToAttributeObserver implements ObserverInterface
 {
     /**
-     * @var \Magento\Cms\Model\Wysiwyg\Config
+     * @var ConfigInterface
      */
     private $wysiwygConfig;
 
     /**
-     * AddTooltipToAttributeObserver constructor.
-     * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig
+     * @param ConfigInterface $wysiwygConfig
      */
-    public function __construct(\Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig)
+    public function __construct(ConfigInterface $wysiwygConfig)
     {
         $this->wysiwygConfig = $wysiwygConfig;
     }
 
-    public function execute(Observer $observer)
+    public function execute(Observer $observer): void
     {
-        /** @var \Magento\Framework\Data\Form $form */
-        $form = $observer->getForm();
+        /** @var Form $form */
+        $form     = $observer->getForm();
         $fieldset = $form->getElement('base_fieldset');
         $fieldset->addField(
-            'tooltip',
+            'default_tooltip',
             'editor',
             [
-                'name' => 'tooltip',
-                'label' => __('Attribute tooltip'),
-                'title' => __('Attribute tooltip'),
+                'name'   => 'default_tooltip',
+                'label'  => __('Default Tooltip'),
+                'title'  => __('Default Tooltip'),
                 'config' => $this->wysiwygConfig->getConfig(),
             ]
         );
