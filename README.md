@@ -1,5 +1,7 @@
 # Magento 2.3 product attribute tooltips
 
+![downloads](https://img.shields.io/packagist/dt/Spaggel/Tooltip?style=plastic)
+
 **This module is in development, use at your own risk**
 
 This module adds support for tooltips on product attributes.
