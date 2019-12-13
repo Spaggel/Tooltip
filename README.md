@@ -1,4 +1,4 @@
-# Magento 2.2 product attribute tooltips
+# Magento 2.3 product attribute tooltips
 
 **This module is in development, use at your own risk**
 
@@ -16,7 +16,7 @@ Run `composer require spaggel/tooltip` to install the latest release.
 
 ### Demo
 
-Frontend demo: [here](https://magento2.spaggel.nl/configurable-product-2.html)
+Frontend demo: [here](https://magento2.spaggel.nl/configurable-product-2.html) (currently offline)
 
 ### Screenshots
 
@@ -45,7 +45,8 @@ Opened:
 Add support for:
 - [ ] Layered navigation attributes
 - [ ] CMS variables (e.g. {{store url}}) **Work in progress**
-- [ ] ?
+- [ ] Multistore/multilanguage
+- [ ] ??
 
 ## How to use
 
