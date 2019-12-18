@@ -3,4 +3,7 @@
     <event name="product_attribute_form_build_main_tab">
         <observer name="add_tooltip_field_to_attribute" instance="Spaggel\Tooltip\Observer\AddTooltipToAttributeObserver" />
     </event>
+    <event name="catalog_entity_attribute_save_after">
+        <observer name="spaggel_tooltip" instance="Spaggel\Tooltip\Observer\StoreTooltipsObserver" />
+    </event>
 </config>

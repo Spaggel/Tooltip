@@ -13,6 +13,7 @@ use Magento\Framework\Data\FormFactory;
 use Magento\Framework\Registry;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Ui\Component\Wysiwyg\ConfigInterface;
+use Spaggel\Tooltip\Model\ResourceModel\TooltipFactory as TooltipResourceFactory;
 
 class Tooltips extends Generic implements TabInterface
 {
@@ -26,17 +27,24 @@ class Tooltips extends Generic implements TabInterface
      */
     private $storeManager;
 
+    /**
+     * @var TooltipResourceFactory
+     */
+    private $tooltipResourceFactory;
+
     public function __construct(
         Context $context,
         Registry $registry,
         FormFactory $formFactory,
         ConfigInterface $wysiwygConfig,
         StoreManagerInterface $storeManager,
+        TooltipResourceFactory $tooltipResourceFactory,
         array $data = []
     ) {
         parent::__construct($context, $registry, $formFactory, $data);
-        $this->wysiwygConfig = $wysiwygConfig;
-        $this->storeManager  = $storeManager;
+        $this->wysiwygConfig          = $wysiwygConfig;
+        $this->storeManager           = $storeManager;
+        $this->tooltipResourceFactory = $tooltipResourceFactory;
     }
 
     public function getTabLabel(): string
@@ -68,6 +76,9 @@ class Tooltips extends Generic implements TabInterface
     {
         /** @var Attribute $attributeObject */
         $attributeObject = $this->_coreRegistry->registry('entity_attribute');
+        $tooltipResource = $this->tooltipResourceFactory->create();
+        $attributeId     = (int)$attributeObject->getAttributeId();
+        $storeTooltips   = $tooltipResource->loadStoreTooltips($attributeId);
 
         /** @var Form $form */
         $form = $this->_formFactory->create(
@@ -81,20 +92,22 @@ class Tooltips extends Generic implements TabInterface
 
         foreach ($this->storeManager->getStores(false) as $store) {
             $label = __('Tooltip For Store %1 (ID %2)', $store->getName(), $store->getId());
+            $value = $storeTooltips[$store->getId()] ?? '';
             $fieldset->addField(
                 'tooltip_' . $store->getId(),
                 'editor',
                 [
-                    'name'   => 'tooltip[' . $store->getId() . ']',
+                    'name'   => 'tooltips[' . $store->getId() . ']',
                     'label'  => $label,
                     'title'  => $label,
                     'config' => $this->wysiwygConfig->getConfig(),
+                    // this does not work :(
+                    'value'  => $value
                 ]
             );
         }
 
         $this->setForm($form);
-        $form->setValues($attributeObject->getData());
 
         return parent::_prepareForm();
     }

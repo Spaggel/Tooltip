@@ -1,0 +1,16 @@
+{
+    "spaggel_tooltips": {
+        "column": {
+            "tooltip_id": true,
+            "attribute_id": true,
+            "store_id": true,
+            "tooltip": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "SPAGGEL_TOOLTIPS_ATTRIBUTE_ID_EAV_ATTRIBUTE_ATTRIBUTE_ID": true,
+            "SPAGGEL_TOOLTIPS_STORE_ID_STORE_STORE_ID": true,
+            "SPAGGEL_TOOLTIPS_ATTRIBUTE_ID_STORE_ID": true
+        }
+    }
+}
