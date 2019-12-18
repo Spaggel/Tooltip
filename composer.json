@@ -1,6 +1,6 @@
 {
     "name": "spaggel/tooltip",
-    "description": "Product attribute tooltips module for Magento 2.2",
+    "description": "Product attribute tooltips module for Magento 2",
     "require": {
         "magento/framework": "~102.0",
         "magento/module-backend": "~101.0",

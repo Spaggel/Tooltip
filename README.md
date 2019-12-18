@@ -1,4 +1,4 @@
-# Magento 2.2 product attribute tooltips
+# Magento 2 Product Attribute Tooltips
 
 **This module is in development, use at your own risk**
 
