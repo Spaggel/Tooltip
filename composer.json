@@ -2,8 +2,7 @@
     "name": "spaggel/tooltip",
     "description": "Product attribute tooltips module for Magento 2.2",
     "require": {
-        "php": "~7.1.3||~7.2.0||~7.3.0",
-        "magento/magento-composer-installer": "*"
+        "php": "~7.1.3||~7.2.0||~7.3.0"
     },
     "type": "magento2-module",
     "license": "MIT",
