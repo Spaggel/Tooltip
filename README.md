@@ -1,4 +1,4 @@
-# Magento 2.3 product attribute tooltips
+# Magento 2 Product Attribute Tooltips
 
 ![downloads](https://img.shields.io/packagist/dt/Spaggel/Tooltip?style=plastic)
 
