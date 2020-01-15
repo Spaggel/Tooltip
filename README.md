@@ -47,7 +47,6 @@ Opened:
 Add support for:
 - [ ] Layered navigation attributes
 - [ ] CMS variables (e.g. {{store url}}) **Work in progress**
-- [ ] Multistore/multilanguage
 - [ ] ??
 
 ## How to use
