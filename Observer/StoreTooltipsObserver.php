@@ -58,6 +58,7 @@ class StoreTooltipsObserver implements ObserverInterface
             $tooltipResource->save($defaultTooltip);
         }
 
-        $tooltipResource->saveStoreTooltips($attributeId, $attribute->getData('tooltips'));
+        $storeTooltips = $attribute->getData('tooltips') ?? [];
+        $tooltipResource->saveStoreTooltips($attributeId, $storeTooltips);
     }
 }
