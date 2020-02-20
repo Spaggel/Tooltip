@@ -52,7 +52,7 @@ define(['jquery'], function ($) {
                     var hasTooltip = item.tooltip.length > 0 && !$widget.inProductList;
                     var toolTipHtml = hasTooltip ?
                         '<span class="spaggel-tooltip">' +
-                        '<a href="#" class="tooltip-toggle">?</a>' +
+                        '<a class="tooltip-toggle">?</a>' +
                         '<span class="tooltip-content">' + item.tooltip + '</span>' +
                         '</span>'
                         : "";
