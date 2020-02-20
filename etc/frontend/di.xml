@@ -3,4 +3,7 @@
     <type name="Magento\Catalog\Block\Product\View\Attributes">
         <plugin name="spaggel_tooltips" type="Spaggel\Tooltip\Plugin\Catalog\Product\View\AttributesPlugin"/>
     </type>
+    <type name="Magento\ConfigurableProduct\Model\ConfigurableAttributeData">
+        <plugin name="spaggel_tootlips" type="Spaggel\Tooltip\Plugin\ConfigurableProduct\ConfigurableAttributeDataPlugin"/>
+    </type>
 </config>
