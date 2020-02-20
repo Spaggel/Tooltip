@@ -91,7 +91,7 @@ class Tooltip extends AbstractDb
 
     public function loadTooltips(array $attributeIds): array
     {
-        $storeId         = $this->storeManager->getStore()->getId();
+        $storeId         = (int)$this->storeManager->getStore()->getId();
         $defaultTooltips = $this->loadTooltipsFromStore($attributeIds, Store::DEFAULT_STORE_ID);
         $storeTooltips   = $this->loadTooltipsFromStore($attributeIds, $storeId);
 
