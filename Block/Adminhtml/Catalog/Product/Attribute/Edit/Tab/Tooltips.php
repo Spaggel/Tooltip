@@ -13,6 +13,7 @@ use Magento\Framework\Data\FormFactory;
 use Magento\Framework\Registry;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Ui\Component\Wysiwyg\ConfigInterface;
+use Spaggel\Tooltip\Model\ResourceModel\Tooltip as TooltipResource;
 use Spaggel\Tooltip\Model\ResourceModel\TooltipFactory as TooltipResourceFactory;
 
 class Tooltips extends Generic implements TabInterface
@@ -76,9 +77,10 @@ class Tooltips extends Generic implements TabInterface
     {
         /** @var Attribute $attributeObject */
         $attributeObject = $this->_coreRegistry->registry('entity_attribute');
+        /** @var TooltipResource $tooltipResource */
         $tooltipResource = $this->tooltipResourceFactory->create();
         $attributeId     = (int)$attributeObject->getAttributeId();
-        $storeTooltips   = $tooltipResource->loadStoreTooltips($attributeId);
+        $storeTooltips   = $tooltipResource->loadAttributeStoreTooltips($attributeId);
 
         /** @var Form $form */
         $form = $this->_formFactory->create(
