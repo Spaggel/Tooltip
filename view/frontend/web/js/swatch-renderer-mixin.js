@@ -12,7 +12,8 @@ define(['jquery'], function ($) {
                 var $widget = this,
                     container = this.element,
                     classes = this.options.classes,
-                    chooseText = this.options.jsonConfig.chooseText;
+                chooseText = this.options.jsonConfig.chooseText,
+                showTooltip = this.options.showTooltip;
 
                 $widget.optionsMap = {};
 
@@ -51,7 +52,7 @@ define(['jquery'], function ($) {
                     var hasTooltip = item.tooltip.length > 0 && !$widget.inProductList;
                     var toolTipHtml = hasTooltip ?
                         '<span class="spaggel-tooltip">' +
-                        '<a href="#" class="tooltip-toggle">?</a>' +
+                        '<a class="tooltip-toggle">?</a>' +
                         '<span class="tooltip-content">' + item.tooltip + '</span>' +
                         '</span>'
                         : "";
@@ -90,10 +91,12 @@ define(['jquery'], function ($) {
                     });
                 });
 
-                // Connect Tooltip
-                container
-                    .find('[option-type="1"], [option-type="2"], [option-type="0"], [option-type="3"]')
-                    .SwatchRendererTooltip();
+                if (showTooltip === 1) {
+                    // Connect Tooltip
+                    container
+                        .find('[option-type="1"], [option-type="2"], [option-type="0"], [option-type="3"]')
+                        .SwatchRendererTooltip();
+                }
 
                 // Hide all elements below more button
                 $('.' + classes.moreButton).nextAll().hide();

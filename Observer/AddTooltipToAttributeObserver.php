@@ -42,7 +42,7 @@ class AddTooltipToAttributeObserver implements ObserverInterface
         /** @var TooltipResource $tooltipResource */
         $tooltipResource = $this->tooltipResourceFactory->create();
         $attributeId = (int)$this->request->getParam('attribute_id');
-        $value       = $tooltipResource->loadDefaultTooltip($attributeId);
+        $value       = $tooltipResource->loadAttributeDefaultTooltip($attributeId);
         /** @var Form $form */
         $form     = $observer->getForm();
         $fieldset = $form->getElement('base_fieldset');
