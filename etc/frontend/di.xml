@@ -6,4 +6,5 @@
     <type name="Magento\ConfigurableProduct\Model\ConfigurableAttributeData">
         <plugin name="spaggel_tootlips" type="Spaggel\Tooltip\Plugin\ConfigurableProduct\ConfigurableAttributeDataPlugin"/>
     </type>
+    <preference for="Magento\Swatches\Block\Product\Renderer\Configurable" type="Spaggel\Tooltip\Block\Swatches\Product\Renderer\Configurable"/>
 </config>
