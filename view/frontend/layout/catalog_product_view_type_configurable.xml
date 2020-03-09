@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.options.configurable" template="Spaggel_Tooltip::product/view/type/options/configurable.phtml">
+            <arguments>
+                <argument name="tooltips_view_model" xsi:type="object">Spaggel\Tooltip\ViewModel\ConfigurableTooltips</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.info.options.swatches">
+            <arguments>
+                <argument name="tooltips_view_model" xsi:type="object">Spaggel\Tooltip\ViewModel\ConfigurableTooltips</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
