@@ -39,8 +39,8 @@ class MigrateTooltips implements DataPatchInterface
         }
 
         $connection        = $this->setup->getConnection();
-        $eavAttributeTable = $connection->getTableName('eav_attribute');
-        $tooltipsTable     = $connection->getTableName('spaggel_tooltips');
+        $eavAttributeTable = $this->setup->getTable('eav_attribute');
+        $tooltipsTable     = $this->setup->getTable('spaggel_tooltips');
         $select            = $connection->select()
             ->from($eavAttributeTable)
             ->where('tooltip IS NOT NULL')
@@ -61,7 +61,7 @@ class MigrateTooltips implements DataPatchInterface
     {
         $tooltipColumnExists = false;
         $connection          = $this->setup->getConnection();
-        $eavAttributeTable   = $connection->getTableName('eav_attribute');
+        $eavAttributeTable   = $this->setup->getTable('eav_attribute');
         // disallow the ddl cache here, because we deleted the column in the DeleteOldTooltipColumn patch
         $connection->disallowDdlCache();
         if ($connection->tableColumnExists($eavAttributeTable, 'tooltip')) {

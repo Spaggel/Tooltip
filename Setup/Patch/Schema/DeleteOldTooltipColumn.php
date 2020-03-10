@@ -32,9 +32,8 @@ class DeleteOldTooltipColumn implements SchemaPatchInterface
 
     public function apply(): self
     {
-        $connection = $this->schemaSetup->getConnection();
-        $tableName  = $connection->getTableName('eav_attribute');
-        $connection->dropColumn($tableName, 'tooltip');
+        $tableName  = $this->schemaSetup->getTable('eav_attribute');
+        $this->schemaSetup->getConnection()->dropColumn($tableName, 'tooltip');
 
         return $this;
     }
