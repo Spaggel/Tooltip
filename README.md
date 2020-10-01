@@ -2,9 +2,12 @@
 
 ![downloads](https://img.shields.io/packagist/dt/Spaggel/Tooltip?style=plastic)
 
-**This module is in development, use at your own risk**
-
 This module adds support for tooltips on product attributes.
+
+### Support me 
+You can support my work by buying me a coffee 😀
+
+<a href="https://www.buymeacoffee.com/spaggel" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Install
 
@@ -64,3 +67,4 @@ This module is using the [MIT License](https://github.com/Spaggel/Tooltip/blob/m
 ### Contributing
 
 Feel free to create an issue or submit a pull request. I'll do the best I can to help you.
+
