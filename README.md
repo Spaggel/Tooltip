@@ -4,6 +4,9 @@
 
 This module adds support for tooltips on product attributes.
 
+<b> Version 1.2.0 and above of this module will only support Magento 2.4. For Magento versions below 2.4, 
+please use versions older then 1.2.0 of this module.</b>
+
 ### Support me 
 You can support my work by buying me a coffee 😀
 

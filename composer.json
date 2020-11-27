@@ -2,12 +2,12 @@
     "name": "spaggel/tooltip",
     "description": "Product attribute tooltips module for Magento 2",
     "require": {
-        "magento/framework": "~102.0||~103.0",
-        "magento/module-backend": "~101.0||102.1",
-        "magento/module-catalog": "~103.0||104.0",
+        "magento/framework": "~103.0",
+        "magento/module-backend": "~102.1",
+        "magento/module-catalog": "~104.0",
         "magento/module-store": "~101.0",
         "magento/module-ui": "~101.1",
-        "php": "~7.1.3||~7.2.0||~7.3.0||7.4.0"
+        "php": "~7.3.0||7.4.0"
     },
     "type": "magento2-module",
     "license": "MIT",
