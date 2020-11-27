@@ -12,8 +12,8 @@ define(['jquery'], function ($) {
                 var $widget = this,
                     container = this.element,
                     classes = this.options.classes,
-                chooseText = this.options.jsonConfig.chooseText,
-                showTooltip = this.options.showTooltip;
+                    chooseText = this.options.jsonConfig.chooseText,
+                    showTooltip = this.options.showTooltip;
 
                 $widget.optionsMap = {};
 
@@ -60,8 +60,8 @@ define(['jquery'], function ($) {
                     // Create new control
                     container.append(
                         '<div class="' + classes.attributeClass + ' ' + item.code + '" ' +
-                        'attribute-code="' + item.code + '" ' +
-                        'attribute-id="' + item.id + '">' +
+                        'data-attribute-code="' + item.code + '" ' +
+                        'data-attribute-id="' + item.id + '">' +
                         label +
                         toolTipHtml + // append the tooltip (possibly empty if string is empty in backend)
                         '<div aria-activedescendant="" ' +
@@ -94,7 +94,8 @@ define(['jquery'], function ($) {
                 if (showTooltip === 1) {
                     // Connect Tooltip
                     container
-                        .find('[option-type="1"], [option-type="2"], [option-type="0"], [option-type="3"]')
+                        .find('[data-option-type="1"], [data-option-type="2"],' +
+                            ' [data-option-type="0"], [data-option-type="3"]')
                         .SwatchRendererTooltip();
                 }
 
