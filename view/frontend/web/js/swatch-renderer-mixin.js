@@ -49,7 +49,7 @@ define(['jquery'], function ($) {
 
                     // Check if the tooltip has content and we are not in the product list,
                     // otherwise set it to an empty string
-                    var hasTooltip = item.tooltip.length > 0 && !$widget.inProductList;
+                    var hasTooltip = item.tooltip && item.tooltip.length > 0 && !$widget.inProductList;
                     var toolTipHtml = hasTooltip ?
                         '<span class="spaggel-tooltip">' +
                         '<a class="tooltip-toggle">?</a>' +
