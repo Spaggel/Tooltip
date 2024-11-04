@@ -39,7 +39,7 @@ class Tooltip extends AbstractDb
         );
 
         $defaultTooltip = $connection->fetchOne($select, $bind);
-        if ($defaultTooltip === false) {
+        if ($defaultTooltip === false || $defaultTooltip === null) {
             return '';
         }
 
